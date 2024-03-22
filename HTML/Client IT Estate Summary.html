@@ -1,0 +1,419 @@
+<html>
+
+<head>
+  <style>
+    @media print {
+      div {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .body {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .section {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding-bottom: 25px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .sectiondiv {
+      width: 100%;
+      height: auto;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .sectiongroupheadingtext {
+      font-size: xx-large;
+      color: #000000;
+    }
+
+    .sectionheadingtext {
+      font-size: large;
+      color: #30368f;
+    }
+
+    .sectionbodydiv {
+      width: 100%;
+    }
+
+    .sectiontablediv {
+      flex: 0 0 auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 12px;
+    }
+
+    .sectiontable {
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="body">
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectiongroupheadingdiv">
+            <b class="sectiongroupheadingtext">Summary
+            </b>
+          </div>
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">1. Report Overview
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">As part of your Support service, we perform a monthly check across your
+              environment to
+              ensure that your IT remains healthy. We have summarised below the current health of your environment.
+              Where a
+              section is highlighted as Amber or Red, there will an associated action in Section 2:
+              <br>
+              <br>
+              <img
+                src="https://cdn.discordapp.com/attachments/642937100634816545/1210602778200768522/green-light-4.png?ex=65eb28b2&is=65d8b3b2&hm=5e3eccfbc354d01e378f910aef90d53480188329c1785e4645ac34bff5fa7b79&"
+                style="vertical-align: middle;width: 20px; padding: 1px;">
+              &nbsp;Indicates that this section is healthy with no actions to be taken.
+              <br>
+              <img
+                src="https://cdn.discordapp.com/attachments/642937100634816545/1210602425849745429/Image.png?ex=65eb285e&is=65d8b35e&hm=5ee474b3d2d84d151b4b78fcbbc311639b0e49dc9fa3f6e8008922a331f72c9a&"
+                style="vertical-align: middle;width: 20px; padding: 1px;">
+              &nbsp;Indicates that this section has some actions required that aren’t urgent.
+              <br>
+              <img
+                src="https://cdn.discordapp.com/attachments/642937100634816545/1210602662463021139/Image_1.png?ex=65eb2896&is=65d8b396&hm=c7cb7e050d1b1a89dd2348cce1f6977b0454f70729420200ac88aeee726fdded&"
+                style="vertical-align: middle;width: 20px; padding: 1px;">
+              &nbsp;Indicates that this section has urgent actions required.
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRReportStatusTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">2. Report actions
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">The below table details any actions that have arisen from each section of your
+              report. If you have any questions about what is listed here, please let us know:
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRReportActionsTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectiongroupheadingdiv">
+            <b class="sectiongroupheadingtext">Servers
+            </b>
+          </div>
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">3. Server Health
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRServerReviewNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRServerHealthTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">4. Server Patch Management
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRServerPatchManagementNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRServerPatchTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">5. Server Anti-virus
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRServerAVNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRServerAVTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">6. Server Backup
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRServerBackupNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRServerBackupTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">7. Storage Device(s)
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRStorageDeviceNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRStorageTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">8. Uninterruptable Power Supply (UPS)
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRUPSNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRUPSTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectiongroupheadingdiv">
+            <b class="sectiongroupheadingtext">Endpoints
+            </b>
+          </div>
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">9. Endpoint Numbers
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRWorkstationNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRWorkstationTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">10. Licensed Services Comparison
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRServicesComparisonNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRServicesComparisonTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">11. Offline Endpoints
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBROfflineEndpointNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBROfflineEndpointTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">12. Windows Patch Management
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRWindowsPatchManagementNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRWindowsPatchManagementTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">13. Windows Operating System (OS) Versions
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRWindowsOSVersionsNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRWindowsOSVersionsTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">14. Mobile Device Encryption
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRMobileDeviceEncryptionNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRMobileDeviceEncryptionTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">15. Endpoint Anti-virus
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBREndpointAVNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBREndpointAVTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectiongroupheadingdiv">
+            <b class="sectiongroupheadingtext">Email & Cloud Services
+            </b>
+          </div>
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">16. Email Statistics
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBREmailStatisticsNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBREmailStatisticsTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">17. Microsoft 365 Risky Sign-ins
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBR365RiskySigninsNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBR365RiskySigninsTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <b class="sectionheadingtext">18. Cloud Backup & Replication
+            </b>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">$CFQBRCloudBackupNotes
+            </div>
+            <br>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRCloudBackupTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sectiondiv">
+          <div class="sectionheadingdiv">
+            <div class="sectiongroupheadingdiv">
+              <b class="sectiongroupheadingtext">Report Information
+              </b>
+            </div>
+            <b class="sectionheadingtext">19. Generation Summary
+            </b>
+          </div>
+          <div class="sectiontablediv">
+            <p class="sectiontable">$CTQBRGenerationSummary</p>
+          </div>
+          <div class="sectionbodydiv">
+            <div class="sectiontext">This report was sent to the following recipients:
+            </div>
+            <div class="sectiontablediv">
+              <p class="sectiontable">$CTQBRRecipientsTable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<html>
+
+<head>
+    <style type="text/css" media="screen">
+        @media print {
+            div {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        .number {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 40px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        .desc {
+            top: 18px;
+            font-size: 15px;
+            width: 50%;
+        }
+
+        .page {
+            height: auto;
+        }
+
+        .section {
+            height: auto;
+            padding-bottom: 25px;
+        }
+
+        .chart {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sectiondiv {
+            height: auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .sectiongroupheadingtext {
+            font-size: xx-large;
+            color: #000000;
+        }
+
+        .sectionheadingtext {
+            padding-top: 10px;
+            font-size: large;
+            color: #30368f;
+        }
+
+        .sectiontablediv {
+            flex: 0 0 auto;
+            height: auto;
+            padding-bottom: 12px;
+            text-align: center;
+        }
+
+        .sectiontable {
+            text-align: center;
+        }
+
+        .container {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        .descriptioncontainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 5px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .descriptioncolumn {
+            flex: 1;
+            padding: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+    <div class="section">
+        <div class="title">
+            Ticket Statistics
+        </div>
+        <div class="container">
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT227SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Tickets Opened
+                    </span>
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT228SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Tickets Closed
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectiondiv">
+                <div class="sectionheadingdiv">
+                    <b class="sectionheadingtext">
+                        Tickets Opened by Type
+                    </b>
+                    <div class="chart">
+                        $REPORT227CHART
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT229SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Average Response Time
+                    </span>
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT229SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Average Resolution Plan Time (hrs)
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectiondiv">
+                <div class="sectionheadingdiv">
+                    <b class="sectionheadingtext">
+                        Average Response & Resolution Time
+                    </b>
+                    <div class="chart">
+                        $REPORT229CHART
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectiondiv">
+                <div class="sectionheadingdiv">
+                    <b class="sectionheadingtext">
+                        Tickets Opened by Priority
+                    </b>
+                    <div class="chart">
+                        $REPORT230CHART
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectiondiv">
+                <div class="sectionheadingdiv">
+                    <b class="sectionheadingtext">
+                        SLA Statistics by Priority
+                    </b>
+                </div>
+                <div class="sectiontablediv">
+                    <table class="sectiontable">
+                        $REPORT242DATA
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sectiondiv">
+                <div class="sectionheadingdiv">
+                    <b class="sectionheadingtext">
+                        Most Active Users
+                    </b>
+                    <div class="chart">
+                        $REPORT233CHART
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="title">
+        Asset Management
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT244SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Servers
+                    </span>
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    <span class="number">
+                        $REPORT245SUM{Count}
+                    </span>
+                    <br>
+                    <span class="desc">
+                        Endpoints
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sectiondiv">
+            <div class="sectionheadingdiv">
+                <b class="sectionheadingtext">
+                    Endpoint Health Status
+                </b>
+                <div class="chart">
+                    $
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sectiondiv">
+            <div class="sectionheadingdiv">
+                <b class="sectionheadingtext">
+                    Server Health Status
+                </b>
+                <div class="chart">
+                    $
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sectiondiv">
+            <div class="sectionheadingdiv">
+                <b class="sectionheadingtext">
+                    Endpoint Disk Utilization
+                </b>
+                <div class="chart">
+                    $
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sectiondiv">
+            <div class="sectionheadingdiv">
+                <b class="sectionheadingtext">
+                    Server Disk Utilization
+                </b>
+                <div class="chart">
+                    $
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="sectiondiv">
+            <div class="sectionheadingdiv">
+                <b class="sectionheadingtext">
+                    Top 25 Most Installed Applications
+                </b>
+                <div class="chart">
+                    $
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        Customer Satisfaction
+    </div>
+        <div class="section">
+            <div class="container">
+                <div class="column">
+                    <p>
+                        <span class="number">
+                            $REPORT227SUM{Count}
+                        </span>
+                        <br>
+                        <span class="desc">
+                            CSAT Score
+                        </span>
+                    </p>
+                </div>
+                <div class="column">
+                    <p>
+                        <span class="number">
+                            $REPORT228SUM{Count}
+                        </span>
+                        <br>
+                        <span class="desc">
+                            Total Responses
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="sectiondiv">
+                    <div class="sectionheadingdiv">
+                        <b class="sectionheadingtext">
+                            Most Active Users
+                        </b>
+                        </div>
+                        <div class="sectiontablediv">
+                            <table class="sectiontable">
+                                $REPORT242DATA
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
